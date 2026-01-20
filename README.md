@@ -247,3 +247,16 @@ See code comments for documentation aimed at contributors.
 ## License
 
 MIT
+
+## Screenshot
+
+### Login
+<img width="676" height="565" alt="image" src="https://github.com/user-attachments/assets/04c92713-c0cc-4df2-996b-ebd487bb5fcf" />
+
+### Dashboard:
+<img width="1636" height="965" alt="image" src="https://github.com/user-attachments/assets/67f82266-0652-4e9c-a70f-3a19b7b79bb3" />
+
+### Detail Agent
+<img width="1297" height="965" alt="image" src="https://github.com/user-attachments/assets/56574ead-46dc-45c9-a877-a65ceb51d85c" />
+
+
