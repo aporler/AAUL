@@ -23,6 +23,8 @@ dashboard/public/agent/
 # SSL keys/certs
 dashboard/ssl/*
 !dashboard/ssl/.gitkeep
+dashboard/server/ssl/*
+!dashboard/server/ssl/README.md
 
 # Python
 __pycache__/
