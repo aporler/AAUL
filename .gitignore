@@ -1,0 +1,35 @@
+*.log
+*.pid
+*.swp
+*.swo
+.DS_Store
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+
+# Build artifacts
+dashboard/client/dist/
+dashboard/public/agent/
+
+# Local databases
+*.sqlite
+*.sqlite-journal
+
+# SSL keys/certs
+dashboard/ssl/*
+!dashboard/ssl/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Agent runtime
+/opt/agentautoupdate/
