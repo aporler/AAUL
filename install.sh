@@ -89,17 +89,21 @@ ensure_build_tools() {
     if has_cmd apt-get; then
       log "Installing build tools (apt)"
       $sudo_cmd apt-get update -y
-      $sudo_cmd apt-get install -y build-essential python3 make g++
+      local python_pkgs=(python3 python3-setuptools)
+      if has_cmd apt-cache && apt-cache show python3-distutils >/dev/null 2>&1; then
+        python_pkgs+=(python3-distutils)
+      fi
+      $sudo_cmd apt-get install -y build-essential make g++ "${python_pkgs[@]}"
       return
     fi
     if has_cmd dnf; then
       log "Installing build tools (dnf)"
-      $sudo_cmd dnf -y install gcc gcc-c++ make python3
+      $sudo_cmd dnf -y install gcc gcc-c++ make python3 python3-setuptools
       return
     fi
     if has_cmd yum; then
       log "Installing build tools (yum)"
-      $sudo_cmd yum -y install gcc gcc-c++ make python3
+      $sudo_cmd yum -y install gcc gcc-c++ make python3 python3-setuptools
       return
     fi
   fi
