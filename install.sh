@@ -90,8 +90,11 @@ ensure_build_tools() {
       log "Installing build tools (apt)"
       $sudo_cmd apt-get update -y
       local python_pkgs=(python3 python3-setuptools)
-      if has_cmd apt-cache && apt-cache show python3-distutils >/dev/null 2>&1; then
-        python_pkgs+=(python3-distutils)
+      if has_cmd apt-cache; then
+        candidate="$(apt-cache policy python3-distutils 2>/dev/null | awk '/Candidate:/{print $2}')"
+        if [ -n "${candidate:-}" ] && [ "${candidate}" != "(none)" ]; then
+          python_pkgs+=(python3-distutils)
+        fi
       fi
       $sudo_cmd apt-get install -y build-essential make g++ "${python_pkgs[@]}"
       return
