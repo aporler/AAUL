@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background: radial-gradient(circle at top, rgba(31, 111, 235, 0.25), transparent 55%),
+    radial-gradient(circle at 20% 20%, rgba(51, 240, 181, 0.2), transparent 45%),
+    #070b12;
+  min-height: 100vh;
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(12, 18, 32, 0.8), rgba(17, 26, 46, 0.6));
+  border: 1px solid rgba(78, 161, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+}
+
+.nav-pill {
+  transition: all 0.2s ease;
+}
+
+.nav-pill:hover {
+  box-shadow: 0 0 0 1px rgba(78, 161, 255, 0.3);
+}
+
+.badge {
+  @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-semibold;
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition;
+}
+
+.btn-primary {
+  @apply bg-ocean-500 text-white hover:bg-ocean-400 shadow-glow;
+}
+
+.btn-secondary {
+  @apply bg-ink-700 text-slate-100 hover:bg-ink-600;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-500;
+}
+
+.card {
+  @apply glass rounded-2xl p-6;
+}
+
+.input {
+  @apply w-full rounded-xl border border-ink-600 bg-ink-800 px-4 py-3 text-sm text-slate-100 focus:border-ocean-400 focus:outline-none;
+}
+
+.table-row {
+  @apply border-b border-ink-700/70;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float-in {
+  animation: floatIn 0.5s ease-out;
+}
