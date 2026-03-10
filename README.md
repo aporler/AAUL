@@ -1,5 +1,7 @@
 # Agent Auto Update Linux
 
+Ce projet est Québecois et donc généralement programmer en Francais mais pour el rendre plus universel ici c'est en Anglais mais en bas vous aurez des lien vers le projet Auxnix et sont Wiki est en Francais
+
 Agent Auto Update Linux, or `AAUL`, is a small fleet management project built around two parts:
 
 - `dashboard/`: the server-side dashboard and API used by administrators
