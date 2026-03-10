@@ -40,7 +40,6 @@ dashboard/
   config/config.json      Static dashboard configuration
 
 docs/
-  wiki/                   User and operator documentation
   ARCHITECTURE.md         High-level codebase tour
   SECURITY_AUDIT.md       Security notes and historical findings
 
@@ -149,12 +148,13 @@ AAUL -agent -remove <AGENT_ID>
 
 ## Documentation
 
-Useful entry points:
+Current entry points:
 
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
-- [docs/wiki/Installation.md](docs/wiki/Installation.md)
-- [docs/wiki/Agent-Architecture.md](docs/wiki/Agent-Architecture.md)
-- [docs/wiki/API-Reference.md](docs/wiki/API-Reference.md)
+- [docs/SECURITY_AUDIT.md](docs/SECURITY_AUDIT.md)
+- [CONTRIBUTING.md](CONTRIBUTING.md)
+
+The older `docs/wiki/` pages were removed from this public tree because they no longer matched the current codebase.
 
 ## Notes for contributors
 
